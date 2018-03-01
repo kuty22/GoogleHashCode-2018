@@ -2,7 +2,6 @@ class Rides:
 
     def __init__(self, line):
         tmpLine = line.split(" ")
-        print(tmpLine)
         self.__conf = dict({"startIntRow": tmpLine[0],
                             "startIntCol": tmpLine[1],
                             "endIntRow": tmpLine[2],
@@ -40,7 +39,6 @@ class parssFile:
             for i, line in enumerate(read_data.split("\n")):
                 if i == 0:
                     summary = line.split(" ")
-                    print(summary)
                     self.__summary = dict({"row": int(summary[0]),
                                            "col": int(summary[1]),
                                            "car": int(summary[2]),
@@ -58,6 +56,12 @@ class parssFile:
 
     def get_cars(self):
         return self.__cars
+
+    def get_ride_information(self):
+        listn = []
+        for r in self.__rides:
+            listn.append(r.get_information())
+        return listn
 
     def get_rides(self):
         return self.__rides
