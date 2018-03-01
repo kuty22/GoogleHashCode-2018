@@ -29,6 +29,9 @@ class Care:
     def get_position(self):
         return dict({"x": self.__x, "y": self.__y})
 
+    def getRides(self):
+        return self.__rideList
+
     def addRide(self, ride):
         self.__rideList.append(ride)
 
