@@ -1,6 +1,7 @@
 class parssFile:
 
     def __init__(self, filename):
+        self.__summary = set()
         with open(filename) as f:
             read_data = f.read()
             lines = read_data.split("\n")
