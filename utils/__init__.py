@@ -18,7 +18,7 @@ class Care:
     def __init__(self):
         self.__x = 0
         self.__y = 0
-        self.__stauts = 0
+        self.status = 0
         self.ride = 0
         self.__rideList = []
 
