@@ -19,6 +19,8 @@ class Care:
         self.__x = 0
         self.__y = 0
         self.__stauts = 0
+        self.ride = 0
+        self.__rideList = []
 
     def move(self, position):
         self.__x = position["x"]
@@ -26,6 +28,9 @@ class Care:
 
     def get_position(self):
         return dict({"x": self.__x, "y": self.__y})
+
+    def addRide(self, ride):
+        self.__rideList.append(ride)
 
 
 class parssFile:
