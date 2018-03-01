@@ -13,3 +13,6 @@ class parssFile:
                                    "steps": int(summary[5])})
 
             print(self.__summary)
+
+    def get_summary(self):
+        return self.__summary
